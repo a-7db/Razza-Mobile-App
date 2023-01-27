@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:razza_app/welcomPage.dart';
+import 'package:razza_app/Screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomePage(),
+      home: Splash_Screen(),
       debugShowCheckedModeBanner: false,
     );
   }
