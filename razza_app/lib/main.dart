@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:razza_app/Screens/signup-in/Email/signUp.dart';
 import 'package:razza_app/Screens/splash.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Splash_Screen(),
+      home: SignUp_Page(),
       debugShowCheckedModeBanner: false,
     );
   }
