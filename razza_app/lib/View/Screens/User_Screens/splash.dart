@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:razza_app/View/Screens/User_Screens/bottombar.dart';
+import 'package:razza_app/View/Screens/signup-in/Email/signIn.dart';
 
 import 'welcomPage.dart';
 
@@ -17,6 +19,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 237, 237, 237),
       body: AnimatedSplashScreen(
+        duration: 5000,
         splash: Center(
           child: FadeIn(
             delay: Duration(milliseconds: 1500),
@@ -27,7 +30,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
             ),
           ),
         ), 
-        nextScreen: WelcomePage(),
+        nextScreen: LoginPage(),
       ),
     );
   }

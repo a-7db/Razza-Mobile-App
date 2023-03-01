@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:razza_app/Screens/signup-in/Email/signIn.dart';
-import '../inputStyle.dart';
+import 'package:razza_app/View/Screens/signup-in/Email/signIn.dart';
+import '../../../Desgin/inputStyle.dart';
 
 class SignUp_Page extends StatefulWidget {
   const SignUp_Page({super.key});
@@ -68,7 +68,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                             child: Container(
                               alignment: Alignment.center,
                               width: size.width * 0.9,
-                              height: size.height * 0.80,
+                              height: size.height * 0.83,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50.0),
                                 color: Colors.white,
@@ -76,6 +76,7 @@ class _SignUp_PageState extends State<SignUp_Page> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
+                                  SizedBox(height: 20),
                                   Container(
                                     height: 30,
                                     margin: EdgeInsets.only(left: 20, bottom: 20),
@@ -145,6 +146,13 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   
                                   //email & password textField
                                   FadeInDown(
+                                      child: inputStyle.useranem_textField(size),
+                                      delay: Duration(milliseconds: 1200)),
+                  
+                                  SizedBox(
+                                    height: size.height * 0.02,
+                                  ),
+                                  FadeInDown(
                                       child: inputStyle.email_SUP_TextField(size),
                                       delay: Duration(milliseconds: 1200)),
                   
@@ -169,23 +177,18 @@ class _SignUp_PageState extends State<SignUp_Page> {
                   
                                   //sign in button
                                   FadeInDown(
-                                      child: inputStyle.signUpButton(size),
+                                      child: inputStyle.signUpButton(size, this.context),
                                       delay: Duration(milliseconds: 2000)),
                   
                                   SizedBox(
                                     height: size.height * 0.04,
                                   ),
                   
-                                  //sign in button
-                                  FadeInDown(
-                                      child: inputStyle.signUpPhoneNumber(
-                                          size, this.context),
-                                      delay: Duration(milliseconds: 2200)),
+                                  
                                 ],
                               ),
                             ),
                           ),
-                          inputStyle.signup_Footer(size)
                         ],
                       ),
                     ),

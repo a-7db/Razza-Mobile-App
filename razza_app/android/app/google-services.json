@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "500445260765",
+    "project_id": "razza-app-58ef0",
+    "storage_bucket": "razza-app-58ef0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500445260765:android:3c49610851e21257f2a434",
+        "android_client_info": {
+          "package_name": "com.example.razza_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500445260765-g4mr1v71r55fg97jcarq5oov5as1ihb6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.razza_app",
+            "certificate_hash": "7344ab1f4f2d137e5fc049a86514b8d425051698"
+          }
+        },
+        {
+          "client_id": "500445260765-o5r48al3h81e78kbesnogo9jgki7avo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4yM3-1JRLz_RGs8XCKiqB8W5R94IeSUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500445260765-o5r48al3h81e78kbesnogo9jgki7avo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

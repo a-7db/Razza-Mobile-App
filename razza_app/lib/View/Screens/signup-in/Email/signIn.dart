@@ -2,17 +2,17 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:razza_app/Screens/signup-in/Email/signIn.dart';
-import '../inputStyle.dart';
+import '../../../Desgin/inputStyle.dart';
 
-class SginInPHONE extends StatefulWidget {
-  const SginInPHONE({super.key});
-
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+  
   @override
-  State<SginInPHONE> createState() => _SginInPHONEState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SginInPHONEState extends State<SginInPHONE> {
+class _LoginPageState extends State<LoginPage> {
+  
   var inputStyle = InputStyle();
   @override
   Widget build(BuildContext context) {
@@ -65,41 +65,6 @@ class _SginInPHONEState extends State<SginInPHONE> {
                               flex: 3,
                               child: Column(
                                 children: [
-                                  Row(
-                                    children: [
-                                      InkWell(
-                                        onTap: () {
-                                          Navigator.pushReplacement(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    LoginPage(),
-                                              ));
-                                        },
-                                        child: Container(
-                                          margin: EdgeInsets.only(top: 10),
-                                          width: 30,
-                                          height: 30,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white70,
-                                              shape: BoxShape.circle),
-                                          child: Icon(Icons.arrow_back,
-                                              color: Color.fromARGB(
-                                                  255, 87, 43, 133)),
-                                        ),
-                                      ),
-                                      SizedBox(width: 20),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 8),
-                                        child: Text(
-                                          'Back',
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 20,
-                                              color: Colors.white70),
-                                        ),
-                                      )
-                                    ],
-                                  ),
                                   const SizedBox(
                                     height: 35,
                                   ),
@@ -116,14 +81,14 @@ class _SginInPHONEState extends State<SginInPHONE> {
                                 ],
                               ),
                             ),
-
+                                
                             //continue with email for sign in app text
                             Expanded(
                               flex: 1,
                               child: FadeInLeft(
                                 delay: Duration(milliseconds: 800),
                                 child: Text(
-                                  'Continue with phone number for sign in App',
+                                  'Continue with email for sign in App',
                                   style: GoogleFonts.poppins(
                                     fontSize: 14.0,
                                     color: Colors.white,
@@ -131,48 +96,49 @@ class _SginInPHONEState extends State<SginInPHONE> {
                                 ),
                               ),
                             ),
-
+                                
                             //email and password TextField here
                             Expanded(
                               flex: 4,
                               child: Column(
                                 children: [
                                   FadeInLeft(
-                                    child:
-                                        inputStyle.phoneTextField_signin(size),
+                                    child: inputStyle.emailTextField_signin(size),
                                     delay: Duration(milliseconds: 1200),
                                   ),
                                   SizedBox(height: 15),
                                   FadeInLeft(
-                                    child: inputStyle
-                                        .passwordTextField_signin(size),
+                                    child: inputStyle.passwordTextField_signin(size),
                                     delay: Duration(milliseconds: 1500),
                                   ),
+                                  FadeInLeft(
+                                    child: inputStyle.phoneoption_signin(size, this.context),
+                                    delay: Duration(milliseconds: 1800),
+                                  )
                                 ],
                               ),
                             ),
-
+                                
                             //sign in button & continue with text here
                             Expanded(
                               flex: 2,
                               child: Column(
                                 children: [
                                   FadeInLeft(
-                                    child: inputStyle.signInButton(size),
+                                    child: inputStyle.signInButton(size, this.context),
                                     delay: Duration(milliseconds: 2200),
                                   ),
                                   const SizedBox(
                                     height: 16,
                                   ),
                                   FadeIn(
-                                    child:
-                                        inputStyle.buildContinueText_signin(),
+                                    child: inputStyle.buildContinueText_signin(),
                                     delay: Duration(milliseconds: 2400),
                                   ),
                                 ],
                               ),
                             ),
-
+                                
                             Expanded(
                               flex: 4,
                               child: Column(
@@ -181,12 +147,11 @@ class _SginInPHONEState extends State<SginInPHONE> {
                                   SizedBox(height: 30),
                                   FadeIn(
                                       child: inputStyle
-                                          .signInGoogleFacebookButton(size),
+                                          .signInGoogleFacebookButton(size, this.context),
                                       delay: Duration(milliseconds: 2600)),
                                   SizedBox(height: 30),
                                   FadeIn(
-                                      child: inputStyle.buildFooter(
-                                          size, this.context),
+                                      child: inputStyle.buildFooter(size, this.context),
                                       delay: Duration(milliseconds: 2600)),
                                 ],
                               ),
